@@ -1,0 +1,2 @@
+[2026-01-13 11:37:54] INFO: This INFO
+[2026-01-13 11:38:04] WARN: Warning Message!

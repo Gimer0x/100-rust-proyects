@@ -1,0 +1,79 @@
+Test with curl:
+
+Add a post:
+curl -X POST -H "Content-Type: application/json" \
+-d '{"title":"SQLite Test", "content":"Rust + SQLx is cool"}' \
+http://127.0.0.1:8080/posts
+
+List posts:
+curl http://127.0.0.1:8080/posts
+
+
+---------------------------------
+1. What you’re doing
+
+You’re creating a SQLite database file and a `posts` table so the app can store blog posts.
+
+2. Create the SQL file
+
+Create a file named `posts.sql` (e.g. in your project folder, e.g. `d66_sqlite_actix`).
+
+Put this inside it:
+
+-- posts.sql
+CREATE TABLE IF NOT EXISTS posts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT NOT NULL,
+    content TEXT NOT NULL
+);
+
+- `CREATE TABLE IF NOT EXISTS posts`** – Create a table named `posts` only if it doesn’t exist (safe to run more than once).
+- `id INTEGER PRIMARY KEY AUTOINCREMENT`** – Column `id`: integer, primary key, auto-incremented (1, 2, 3, …).
+- `title TEXT NOT NULL`** – Column `title`: text, required.
+- `content TEXT NOT NULL`** – Column `content`: text, required.
+
+So: one table `posts` with `id`, `title`, and `content`.
+
+3. Run the SQL with sqlite3
+
+In a terminal:
+
+1. Go to the folder where `posts.sql` is (and where you want the DB file):
+   cd "/Users/gimer/Desktop/Rust Projects/Rust_100/7_Exercises/d66_sqlite_actix"
+
+2. Run:
+   sqlite3 blog.db < posts.sql
+
+- `sqlite3` – SQLite command-line tool.
+- `blog.db` – Name of the database file. It will be created in the current directory if it doesn’t exist.
+- `< posts.sql` – Send the contents of `posts.sql` into `sqlite3` as commands to run.
+
+So: “Run the SQL in `posts.sql` against the database `blog.db`.”
+
+4. What you get
+
+- A file blog.db in that directory (your SQLite database).
+- Inside it, a table posts with columns `id`, `title`, `content`.
+
+
+5. Optional: check it**
+
+Open the DB and list tables:
+
+sqlite3 blog.db
+
+Then in the sqlite3 prompt:
+
+.tables
+
+You should see `posts`. Exit with:
+
+.quit
+
+Summary
+
+| Step | Action |
+|------|--------|
+|   1  | Create `posts.sql` with the `CREATE TABLE` SQL above. |
+|   2  | In the project folder, run: `sqlite3 blog.db < posts.sql`. |
+|   3  | You now have `blog.db` with a `posts` table; point your app (e.g. `d66_sqlite_actix`) at `blog.db`. |

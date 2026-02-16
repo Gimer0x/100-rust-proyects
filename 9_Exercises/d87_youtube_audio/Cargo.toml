@@ -1,0 +1,6 @@
+[package]
+name = "d87_youtube_audio"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]

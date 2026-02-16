@@ -1,0 +1,14 @@
+name = "Ada Lovelace"
+title = "Mathematician & Programmer"
+email = "ada@analytical.engine"
+phone = "+44 123 4567"
+ 
+[[experience]]
+company = "Analytical Engine Research"
+role = "Lead Algorithm Architect"
+year = "1843"
+ 
+[[experience]]
+company = "Royal Society"
+role = "Scientific Advisor"
+year = "1850"

@@ -1,0 +1,8 @@
+[package]
+name = "d86_time_zone"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+chrono = "0.4.43"
+chrono-tz = "0.10.4"

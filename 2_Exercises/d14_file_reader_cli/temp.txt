@@ -1,0 +1,7 @@
+print!() doesn't add a newline, so output may be buffered.
+moves the cursor to the start of the line to overwrite.
+Without flush(), the output might not appear until the buffer fills or a newline is printed.
+flush() ensures the timer display updates immediately.
+What happens without flush():
+The timer might not update visibly each second.
+Output could appear in bursts instead of smoothly.

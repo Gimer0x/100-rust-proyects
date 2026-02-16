@@ -1,0 +1,16 @@
+Test the Full API:
+
+# Create
+curl -X POST -H "Content-Type: application/json" -d '{"title":"Actix CRUD"}' http://localhost:8080/todos
+ 
+# List
+curl http://localhost:8080/todos
+ 
+# View
+curl http://localhost:8080/todos/1
+ 
+# Update
+curl -X PUT -H "Content-Type: application/json" -d '{"completed":true}' http://localhost:8080/todos/1
+ 
+# Delete
+curl -X DELETE http://localhost:8080/todos/1

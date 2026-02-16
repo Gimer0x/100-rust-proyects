@@ -1,0 +1,6 @@
+New Content!
+println!("\n📝 Text File CRUD Menu:");
+println!("1. Create (overwrite)");
+println!("2. Read");
+Hola
+println!("5. Exit");

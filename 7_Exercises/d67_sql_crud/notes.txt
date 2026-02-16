@@ -1,0 +1,15 @@
+Sample Commands:
+
+# Add a todo
+curl -X POST -H "Content-Type: application/json" \
+-d '{"title": "Learn Actix + SQLx"}' http://localhost:8080/todos
+ 
+# List todos
+curl http://localhost:8080/todos
+ 
+# Update todo
+curl -X PUT -H "Content-Type: application/json" \
+-d '{"completed": true}' http://localhost:8080/todos/1
+ 
+# Delete todo
+curl -X DELETE http://localhost:8080/todos/1

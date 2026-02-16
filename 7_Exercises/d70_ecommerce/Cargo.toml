@@ -1,0 +1,10 @@
+[package]
+name = "d70_ecommerce"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+actix-web = "4.12.1"
+dotenvy = "0.15.7"
+serde = { version = "1.0.228", features = ["derive"] }
+sqlx = { version = "0.8.6", features = ["postgres", "macros", "runtime-tokio-native-tls"] }

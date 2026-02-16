@@ -1,0 +1,20 @@
+[
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440000",
+    "title": "Summarize Research Paper",
+    "tags": [
+      "academic",
+      "summarize"
+    ],
+    "content": "Summarize the following text in 3 bullet points..."
+  },
+  {
+    "id": "af7fdfc1-c289-462d-baa5-7853b24419e2",
+    "title": "My prompt",
+    "tags": [
+      "test",
+      "rust"
+    ],
+    "content": "This is a prompt"
+  }
+]

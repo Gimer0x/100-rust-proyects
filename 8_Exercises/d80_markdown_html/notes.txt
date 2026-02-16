@@ -1,0 +1,13 @@
+Why use --?
+If you wrote:
+cargo run sample.md sample.html
+
+Cargo could treat sample.md and sample.html as its own arguments (e.g. package or binary names). 
+Using -- makes it explicit: “everything after this is for my program, not for Cargo.”
+
+In Rust, those show up in std::env::args():
+args()[0] = binary name
+args()[1] = "sample.md"
+args()[2] = "sample.html"
+
+So -- is the standard way to separate Cargo’s arguments from your CLI tool’s arguments.

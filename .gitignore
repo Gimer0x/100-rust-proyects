@@ -1,0 +1,33 @@
+# Rust
+/target/
+**/target/
+
+# Node (e.g. if any frontend tooling uses npm)
+node_modules/
+
+# Data and env (requested)
+*.dat
+.env
+.env.*
+!.env.example
+
+# Trunk / WASM build output
+dist/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE / editors
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+*.rs.bak
+
+# Local debug / test artifacts (optional)
+*.log
+*.db
+*.sqlite
+*.sqlite3

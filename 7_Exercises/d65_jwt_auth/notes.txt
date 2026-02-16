@@ -1,0 +1,17 @@
+Test with curl:
+
+Login and get token:
+curl -X POST -H "Content-Type: application/json" \
+-d '{"username":"admin", "password":"password"}' \
+http://127.0.0.1:8080/login
+
+Use token to access protected route:
+curl -H "Authorization: Bearer <TOKEN>" \
+http://127.0.0.1:8080/protected
+
+
+TOKEN=$(curl -s -X POST -H "Content-Type: application/json" \
+  -d '{"username":"admin", "password":"password"}' \
+  http://127.0.0.1:8080/login | jq -r '.token')
+
+curl -H "Authorization: Bearer $TOKEN" http://127.0.0.1:8080/protected

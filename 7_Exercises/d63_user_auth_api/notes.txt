@@ -1,0 +1,11 @@
+Test It with curl:
+
+Sign up:
+curl -X POST -H "Content-Type: application/json" \
+-d '{"username":"alice", "password":"secret123"}' \
+http://127.0.0.1:8080/signup
+
+Log in:
+curl -X POST -H "Content-Type: application/json" \
+-d '{"username":"alice", "password":"secret123"}' \
+http://127.0.0.1:8080/login

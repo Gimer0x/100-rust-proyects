@@ -1,0 +1,24 @@
+# Stop
+brew services stop postgresql
+
+# Start again
+brew services start postgresql
+
+# Check
+psql -l3
+
+Example Requests:
+
+Create a product:
+curl -X POST -H "Content-Type: application/json" \
+-d '{"name":"Laptop","price":1499.99}' \
+http://localhost:8080/products
+
+Create a customer:
+curl -X POST -H "Content-Type: application/json" \
+-d '{"name":"Alice","email":"alice@example.com"}' \
+http://localhost:8080/customers
+
+List customers and products:
+curl http://localhost:8080/customers
+curl http://localhost:8080/products

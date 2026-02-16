@@ -1,0 +1,15 @@
+Test with curl:
+
+Create a category:
+curl -X POST -H "Content-Type: application/json" \
+-d '{"name":"Rust"}' http://localhost:8080/categories
+
+Create a post:
+curl -X POST -H "Content-Type: application/json" \
+-d '{"title":"Actix Rocks","body":"It's blazing fast.","category_id":1}' \
+http://localhost:8080/posts
+
+Add a comment:
+curl -X POST -H "Content-Type: application/json" \
+-d '{"post_id":1,"author":"Alice","content":"Love it!"}' \
+http://localhost:8080/comments
